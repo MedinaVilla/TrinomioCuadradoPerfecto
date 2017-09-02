@@ -8,7 +8,10 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.WindowConstants;
-
+/** Clase Frame donde estan todos lo visible del programa
+ * 
+ * @author net_m
+ */
 public class Frame extends JFrame {
 
     JTextField num1 = new JTextField();
@@ -23,7 +26,9 @@ public class Frame extends JFrame {
 
     Numero num = new Numero();
 
-    //Configura el frame
+    /**Configura el frame
+     * 
+     */
     public Frame() {
 
         super();
@@ -34,9 +39,11 @@ public class Frame extends JFrame {
         ConfigVentanaa();
         setLayout(null);
     }
-
+    /**Configura los componentes en la ventana
+     * 
+     */
     public void ConfigVentanaa() {
-        //Configura los componentes en la ventana
+       
         tit.setBounds(120, 10, 160, 20);
         tit.setVisible(true);
         add(tit);
@@ -79,11 +86,12 @@ public class Frame extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String s = boton.getText();
-                //Verifica el boton y realiza la acccion
                 if (s.equals("Calcular")) {
                     try {
 
-                        //Valida que el numero sea valido
+                        /**Valida que el numero sea valido
+                         * 
+                         */
                         num.setNum1(Integer.parseInt(num1.getText()));
 
                         num.setNumV(Integer.parseInt(num2.getText()));
@@ -91,23 +99,30 @@ public class Frame extends JFrame {
                         num.setNum2(Double.parseDouble(num2.getText()));
                         //Valida que el numero sea valido
                         if (num.getNum1() == 0 || num.getNum2() == 0) {
-                            //Excepción de error
                             JOptionPane.showMessageDialog(null, "Ingrese un numero valido");
                         } else if (num.getNum1() != 1) {
-                            num.Dividir(); //Ejecuta metodo Dividir
-                            //Muestra el valor de C del método y lo muestra
+                            num.Dividir(); 
+                            /**Muestra el valor de C del método y lo muestra
+                             * 
+                             */
                             num3.setText(String.valueOf(num.ObtenerC()));
-                            //Muestra la ecuación
+                            /**Muestra la ecuación
+                             * 
+                             */
                             ecuacion.setText(num.ecuacion());
                         } else if (num.getNum1() == 1) {
-                            //Muestra el valor de C del metodo y lo muestra
+                            /**Muestra el valor de C del metodo y lo muestra
+                             * 
+                             */
                             num3.setText(String.valueOf(num.ObtenerC()));
-                            //Muestra la ecuacíón
+                            /**Muestra la ecuacíón
+                            * 
+                            */
                             ecuacion.setText(num.ecuacion());
                         }
 
                     } catch (Exception z) {
-                        //Excepción de error
+                       
                         JOptionPane.showMessageDialog(null, "Ingrese un numero valido");
                     }
                 }
