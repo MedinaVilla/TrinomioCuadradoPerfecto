@@ -10,7 +10,10 @@ import javax.swing.JTextField;
 import javax.swing.WindowConstants;
 /** Clase Frame donde estan todos lo visible del programa
  * 
- * @author net_m
+ * @author Medina Villalpando Josue de Jesus
+ *  *
+ * @version 1.0
+ * @since 23/08/17
  */
 public class Frame extends JFrame {
 

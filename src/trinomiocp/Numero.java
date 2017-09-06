@@ -1,7 +1,9 @@
 package trinomiocp;
-/** Clase de numeros
- * 
- * @author net_m
+/**
+ * Clase que permite recibir los parametro del programa como los numeros y la ecuación que mostrará al usuario
+ * @author Medina Villalpando Josue de Jesus 
+ * @version 1.0
+ * @since 23/08/17
  */
 public class Numero {
  /**Recibe el numero a 
@@ -32,7 +34,7 @@ public class Numero {
    
    /** Regresa el valor V que ayudara a validar
     * 
-    * @return 
+    * @return el numV para validar
     */
     public int getNumV() {
         return numV;
@@ -40,49 +42,49 @@ public class Numero {
     
     /** Guarda el valor V que ayudara a validar
      * 
-     * @param numV 
+     * @param numV Recibe un valor que ayudara a validar
      */
     public void setNumV(int numV) {
         this.numV = numV;
     }
  /** Regresa el num1 
   * 
-  * @return 
+  * @return Regresa el num1
   */
     public int getNum1() {
         return num1;
     }
     /** Guardar el num1
      * 
-     * @param num1 
+     * @param num1 Recibe el numero a o 1
      */
     public void setNum1(int num1) {
         this.num1 = num1;
     }
     /** Regresa el num2
      * 
-     * @return 
+     * @return Regresa el num2
      */
     public double getNum2() {
         return num2;
     }
     /** Guarda el num2
      * 
-     * @param num2 
+     * @param num2 Guarda el num2
      */
     public void setNum2(double num2) {
         this.num2 = num2;
     }
     /** Regresa el num3
      * 
-     * @return 
+     * @return Regresa el num3
      */
     public double getNum3() {
         return num3;
     }
     /** Guarda el num3
      * 
-     * @param num3 
+     * @param num3 Guarda el num 3
      */
     public void setNum3(double num3) {
         this.num3 = num3;
@@ -99,7 +101,7 @@ public class Numero {
 
     /**Otiene el valor de C 
      * 
-     * @return 
+     * @return Regresa el valor c o num 3
      */
     public double ObtenerC() {
         this.num3 = Math.pow((this.num2 / 2), 2);
@@ -108,7 +110,7 @@ public class Numero {
 
     /**Obtiene la ecuación
      * 
-     * @return 
+     * @return Regresa la ecuación final
      */
     public String ecuacion() {
         this.ec = num1 + "x2 + " + num2 + "x + " + num3 * num4;
